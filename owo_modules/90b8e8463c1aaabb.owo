@@ -1,0 +1,42 @@
+<template>
+  <div id="myCanvasContainer" class="tag-cloud-box">
+    <canvas width="1000" height="400" id="myCanvas">
+      <p>Anything in here will be replaced on browsers that support the canvas element</p>
+    </canvas>
+  </div>
+  <div id="tags" class="tag-box">
+    <ul>
+      </ul>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      
+    }
+  }
+</script>
+
+
+<style lang="less">
+  canvas {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+  }
+  .rank-1 {
+    font-size: 14px;
+  }
+  .rank-2 {
+    font-size: 20px;
+  }
+  .rank-3 {
+    font-size: 28px;
+  }
+  .tag-cloud-box {
+    position: relative;
+  }
+  
+</style>

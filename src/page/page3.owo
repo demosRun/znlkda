@@ -1,0 +1,21 @@
+<template lang="pug">
+.page3
+  plug(_name="module6" _src="https://template.owo.ink/90b8e8463c1aaabb.owo")
+  img.next-button(src="@|fenxiang.png|" o-animation="shrink" go="page4//fade/moveFromRight//fade/moveFromLeft")
+</template>
+<script>
+module.exports = {
+}
+</script>
+<style lang="less">
+.page3 {
+  background-image: url('@|show.jpg|');
+}
+.next-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1115px;
+  margin: auto;
+}
+</style>

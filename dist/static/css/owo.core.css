@@ -1,0 +1,481 @@
+body, html, .page, .page-box {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.owo-animation {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.owo-animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owo-animation-forward {
+  z-index: 99;
+}
+
+img {
+  border: none;
+}
+
+[route-active="false"] {
+  display: none;
+}
+
+/* 清除浮动 */
+.clear:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.loading-box {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://cunchu.site/ozzx/resource/lanse.jpg');
+}
+
+.loading-box .loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -16%;
+  bottom: 0;
+  margin: auto;
+}
+
+.loading-box .loading-bar {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  height: 20px;
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 2px 3px 9px #5d739c;
+}
+
+.loading-box .num-bar {
+  background-color: #e47d6e;
+  height: 20px;
+  border-radius: 20px;
+  width: 0%;
+  transition: width 0.5s;
+}
+
+.loading-box .num,
+.loading-box .text {
+  position: absolute;
+  top: 0%;
+  bottom: -8%;
+  margin: auto;
+  line-height: 50px;
+  height: 50px;
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.loading-box .text {
+  bottom: -14%;
+}
+@-webkit-keyframes flicker {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 20%;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 20%;
+  }
+}
+
+[o-animation="flicker"] {
+  -webkit-animation: flicker 2s linear 0s infinite alternate;
+  animation: flicker 2s linear 0s infinite alternate;
+}
+
+.page-1 .so {
+  position: absolute;
+}
+
+.page-1 .so-0 {
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+
+.page-1 .so-1 {
+  left: 0px;
+  top: 281px;
+  z-index: 10;
+}
+
+.page-1 .so-2 {
+  left: 375px;
+  top: 427px;
+  z-index: 19;
+}
+
+.page-1 .so-3 {
+  left: 415px;
+  top: 291px;
+  z-index: 11;
+}
+
+.page-1 .so-4 {
+  left: 452px;
+  top: 330px;
+  z-index: 17;
+}
+
+.page-1 .so-5 {
+  left: 574px;
+  top: 187px;
+  z-index: 6;
+}
+
+.page-1 .so-6 {
+  left: 219px;
+  top: 840px;
+  z-index: 5;
+}
+
+.page-1 .so-7 {
+  left: 69px;
+  top: 846px;
+  z-index: 4;
+}
+
+.page-1 .so-8 {
+  left: 175px;
+  top: 824px;
+  z-index: 3;
+}
+
+.page-1 .so-9 {
+  left: 230px;
+  top: 944px;
+  z-index: 12;
+}
+
+.page-1 .so-10 {
+  left: 648px;
+  top: 1062px;
+  z-index: 1;
+}
+
+.page-1 .so-11 {
+  left: 96px;
+  top: 1176px;
+  z-index: 0;
+}
+[o-animation="shrink"] {
+  -webkit-animation: shrink 1s linear alternate infinite;
+  animation: shrink 1s linear alternate infinite;
+}
+@-webkit-keyframes shrink{
+  0%{-webkit-transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes shrink{
+  0%{transform:scale(0.9);}
+  100%{transform:scale(1);}
+}
+
+
+[o-animation="floatLeftRight"] {
+  -webkit-animation: floatLeftRight 3s linear infinite;
+  animation: floatLeftRight 3s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes floatLeftRight {
+  0% { transform: translateX(-5vw);}
+  50% {transform: translateX(5vw);}
+  100% {transform: translateX(-5vw);}
+}
+
+@-webkit-keyframes float {
+  0% { transform: translateX(-5vw);}
+  50% {transform: translateX(5vw);}
+  100% {transform: translateX(-5vw);}
+}
+
+@keyframes float {
+  0% { transform: translateX(-5vw);}
+  50% {transform: translateX(5vw);}
+  100% {transform: translateX(-5vw);}
+}
+
+.page2 {
+  background-image: url('../images/neiye.jpg');
+}
+
+.page2 .next-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 885px;
+  margin: auto;
+}
+
+.page2 .peop {
+  position: absolute;
+  top: 1072px;
+  left: 174px;
+}
+
+.page2 .home {
+  position: absolute;
+  top: 530px;
+  height: 60px;
+  left: 264px;
+  width: 292px;
+  font-size: 26px;
+  background-color: transparent;
+  box-shadow: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+  background-image: url('../images/doit.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.page2 .local {
+  position: absolute;
+  top: 711px;
+  height: 60px;
+  left: 64px;
+  width: 292px;
+  font-size: 26px;
+  background-color: transparent;
+  box-shadow: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+  background-image: url('../images/doit.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.owo-module6 canvas {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.owo-module6 .rank-1 {
+  font-size: 14px;
+}
+
+.owo-module6 .rank-2 {
+  font-size: 20px;
+}
+
+.owo-module6 .rank-3 {
+  font-size: 28px;
+}
+
+.owo-module6 .tag-cloud-box {
+  position: relative;
+}
+.page3 {
+  background-image: url('../images/show.jpg');
+}
+
+.page3 .next-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1115px;
+  margin: auto;
+}
+
+/* 页面切换动画 */
+.o-page-fade {
+	-webkit-animation: fade .7s ease both;
+	-moz-animation: fade .7s ease both;
+	animation: fade .7s ease both;
+}
+
+@-webkit-keyframes fade {
+	to { opacity: 0; }
+}
+@-moz-keyframes fade {
+	to { opacity: 0; }
+}
+@keyframes fade {
+	to { opacity: 0; }
+}
+.o-page-moveFromRight {
+	-webkit-animation: moveFromRight .6s ease both;
+	-moz-animation: moveFromRight .6s ease both;
+	animation: moveFromRight .6s ease both;
+}
+
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRight {
+	from { -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
+.o-page-moveFromLeft {
+	-webkit-animation: moveFromLeft .6s ease both;
+	-moz-animation: moveFromLeft .6s ease both;
+	animation: moveFromLeft .6s ease both;
+}
+
+@-webkit-keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveFromLeft {
+	from { -moz-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+	from { transform: translateX(-100%); }
+}
+
+/* 动画效果 */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: 0.75s;
+  animation-name: bounceIn;
+}
+

@@ -1,0 +1,162 @@
+<template lang="pug">
+.page2
+  img.next-button(src="@|ok-button.png|" o-animation="shrink" o-tap="next()")
+  img.peop(src="@|peop.png|" o-animation="floatLeftRight")
+  <select class="home" name="">
+    <option style="color: #b6b6b6" disabled="" selected="">选择省份</option>
+    <option value="4">北京市</option>
+    <option value="5">天津市</option>
+    <option value="6">河北省</option>
+    <option value="17">山西省</option>
+    <option value="18">内蒙古自治区</option>
+    <option value="8">辽宁省</option>
+    <option value="9">吉林省</option>
+    <option value="10">黑龙江省</option>
+    <option value="12">上海市</option>
+    <option value="13">江苏省</option>
+    <option value="14">浙江省</option>
+    <option value="19">安徽省</option>
+    <option value="20">福建省</option>
+    <option value="21">江西省</option>
+    <option value="22">山东省</option>
+    <option value="27">河南省</option>
+    <option value="28">湖北省</option>
+    <option value="29">湖南省</option>
+    <option value="30">广东省</option>
+    <option value="31">广西壮族自治区</option>
+    <option value="32">海南省</option>
+    <option value="33">重庆市</option>
+    <option value="34">四川省</option>
+    <option value="35">贵州省</option>
+    <option value="36">云南省</option>
+    <option value="37">西藏自治区</option>
+    <option value="41">陕西省</option>
+    <option value="42">甘肃省</option>
+    <option value="43">青海省</option>
+    <option value="44">宁夏回族自治区</option>
+    <option value="45">新疆维吾尔自治区</option>
+    <option value="38">香港特别行政区</option>
+    <option value="39">澳门特别行政区</option>
+  </select>
+  <select class="local" name="">
+    <option style="color: #b6b6b6" disabled="" selected="">选择省份</option>
+    <option value="4">北京市</option>
+    <option value="5">天津市</option>
+    <option value="6">河北省</option>
+    <option value="17">山西省</option>
+    <option value="18">内蒙古自治区</option>
+    <option value="8">辽宁省</option>
+    <option value="9">吉林省</option>
+    <option value="10">黑龙江省</option>
+    <option value="12">上海市</option>
+    <option value="13">江苏省</option>
+    <option value="14">浙江省</option>
+    <option value="19">安徽省</option>
+    <option value="20">福建省</option>
+    <option value="21">江西省</option>
+    <option value="22">山东省</option>
+    <option value="27">河南省</option>
+    <option value="28">湖北省</option>
+    <option value="29">湖南省</option>
+    <option value="30">广东省</option>
+    <option value="31">广西壮族自治区</option>
+    <option value="32">海南省</option>
+    <option value="33">重庆市</option>
+    <option value="34">四川省</option>
+    <option value="35">贵州省</option>
+    <option value="36">云南省</option>
+    <option value="37">西藏自治区</option>
+    <option value="41">陕西省</option>
+    <option value="42">甘肃省</option>
+    <option value="43">青海省</option>
+    <option value="44">宁夏回族自治区</option>
+    <option value="45">新疆维吾尔自治区</option>
+    <option value="38">香港特别行政区</option>
+    <option value="39">澳门特别行政区</option>
+  </select>
+</template>
+<script>
+module.exports = {
+  next: function () {
+    const selectValue = document.querySelector('.local').selectedOptions[0].innerText
+    if (selectValue == '选择省份') {
+      alert('请先选择省份!')
+      return
+    }
+    var myHeaders = new Headers();
+
+    var formdata = new FormData();
+    formdata.append("name", selectValue);
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: formdata,
+      redirect: 'follow'
+    };
+
+    fetch("https://bp.people.com.cn/map_api/puAreas/add", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+    owo.go('page3//fade/moveFromRight//fade/moveFromLeft')
+  }
+}
+</script>
+<style lang="less">
+.page2 {
+  background-image: url('@|neiye.jpg|');
+}
+.next-button {
+  position:  absolute;
+  left: 0;
+  right: 0;
+  top: 885px;
+  margin: auto;
+}
+.peop {
+  position: absolute;
+  top: 1072px;
+  left: 174px;
+}
+.home {
+  position: absolute;
+  top: 530px;
+  height: 60px;
+  left: 264px;
+  width: 292px;
+  font-size: 26px;
+  background-color: transparent;
+  box-shadow: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+  background-image: url('@|doit.png|');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.local {
+  position: absolute;
+  top: 711px;
+  height: 60px;
+  left: 64px;
+  width: 292px;
+  font-size: 26px;
+  background-color: transparent;
+  box-shadow: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+  background-image: url('@|doit.png|');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+</style>

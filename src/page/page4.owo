@@ -1,0 +1,11 @@
+<template lang="pug">
+.page4
+  .share-bg
+    img(src="@|share.jpg|")
+</template>
+<script>
+module.exports = {
+}
+</script>
+<style lang="less">
+</style>
